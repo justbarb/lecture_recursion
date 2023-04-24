@@ -8,8 +8,11 @@ def recursive_nth_fibo(n):
 
 def main():
     n = int(input("Zadejte pocet clenu Fibonacciho posloupnpsti:"))
-    fibo = recursive_nth_fibo(n)
-    print(fibo)
+    seq = []
+    for num in range(n):
+        seq.append(recursive_nth_fibo(num))
+
+    print(seq)
 
 
 if __name__ == "__main__":
